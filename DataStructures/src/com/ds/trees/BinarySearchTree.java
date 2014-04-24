@@ -1,6 +1,7 @@
 package com.ds.trees;
 
 import com.ds.utils.UnderflowException;
+import java.util.Stack;
 
 public class BinarySearchTree {
 	
@@ -62,6 +63,53 @@ public class BinarySearchTree {
     		System.out.println("The Tree is empty");
     	else
     		printTree(root);
+    }
+    
+    public void displayTree(){
+    	
+    	Stack<BinaryNode> globalStack=new Stack<BinaryNode>();
+    	globalStack.push(root);
+    	int nBlanks=64;
+    	boolean isRowEmpty=false;
+    	for(int i=0;i<2*nBlanks;i++)
+        	System.out.print("-");
+    	System.out.println("");
+    	while(isRowEmpty==false){
+    		
+    		Stack<BinaryNode> localStack=new Stack<BinaryNode>();
+    		isRowEmpty=true;
+    		
+    		for(int i=0;i<nBlanks;i++)
+    			System.out.print(' ');
+    		
+    		while(!globalStack.isEmpty())
+    		{
+    			BinaryNode temp=globalStack.pop();
+    			if(temp!=null){
+    				System.out.print(temp.data);
+    				localStack.push(temp.leftChild);
+    				localStack.push(temp.rightChild);
+    				
+    				if(temp.leftChild!=null || temp.rightChild!=null)
+    					isRowEmpty=false;
+    			}
+    			else{
+    				System.out.print("--");
+    				localStack.push(null);
+    				localStack.push(null);
+    			}
+    			
+    			for(int j=0;j<nBlanks*2-2;j++)
+    				System.out.print(' ');
+    			
+    		}
+    		System.out.println();
+    		nBlanks/=2;
+    		while(!localStack.isEmpty())
+    			globalStack.push(localStack.pop());
+    	}
+    	for(int i=0;i<2*nBlanks;i++)
+        	System.out.print("-");
     }
     
     /*

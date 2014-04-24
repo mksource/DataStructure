@@ -28,7 +28,7 @@ public class TestBST {
 		System.out.println("Does the Tree contain element 78 "+tree.contains(78));
         System.out.println("Removing element 56 from tree ");
         tree.remove(56);
-        tree.printTree();
+        tree.displayTree();
 	}
 
 }
