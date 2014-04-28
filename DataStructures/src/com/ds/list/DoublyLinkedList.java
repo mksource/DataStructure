@@ -74,7 +74,7 @@ public class DoublyLinkedList {
 	public void printList(){
 		
 		DLNode cur=HEADER.next;
-		while(cur.next!=TAILER){
+		while(cur!=TAILER){
 			
 			System.out.print(cur.data+"\t");
 			cur=cur.next;

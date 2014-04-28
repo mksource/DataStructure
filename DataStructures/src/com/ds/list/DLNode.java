@@ -2,8 +2,8 @@ package com.ds.list;
 
 public class DLNode {
 
-	int data;
-	DLNode next;
-	DLNode prev;
+	public int data;
+	public DLNode next;
+	public DLNode prev;
 
 }

@@ -1,4 +1,4 @@
-package com.ds.lists;
+package com.ds.list;
 
 public class BinaryHeap {
 
