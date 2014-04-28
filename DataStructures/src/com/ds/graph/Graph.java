@@ -1,6 +1,6 @@
 package com.ds.graph;
 
-import com.ds.basic.Bag;
+import com.ds.list.Bag;
 import com.ds.utils.StdIn;
 
 /*Implementing a graph in adjacent list representation*/

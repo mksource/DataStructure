@@ -1,4 +1,4 @@
-package com.ds.basic;
+package com.ds.list;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
