@@ -18,7 +18,9 @@ public class Problem07 extends CircularLinkedList{
 		   slowptr=slowptr.next;
 	   }
 	
-	   if(fastptr.next!=TAILER)
+	   
+	   
+	   if(fastptr.next==TAILER)
 		   fastptr=fastptr.next;
 	   
 	   SLNode list2Head=slowptr.next;
@@ -28,6 +30,9 @@ public class Problem07 extends CircularLinkedList{
 	   SLNode list1Head=TAILER.next;
 	   SLNode TAILER1=slowptr;
 	   TAILER1.next=list1Head;
+	   
+	 
+	   
 	   
 	   System.out.println("Printing the first circular list"); 
 	   SLNode cur=TAILER1;
@@ -44,7 +49,7 @@ public class Problem07 extends CircularLinkedList{
 		   cur=cur.next;
 	   }while(cur!=TAILER2);
 	   System.out.println("Printing the second circular list");
-		
+	  
 	}
 		
 	public static void main(String args[]){
