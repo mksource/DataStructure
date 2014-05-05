@@ -32,7 +32,7 @@ public class Problem30 extends CircularLinkedList{
 		
 		SLNode cur=TAILER.next;
 		SLNode prev=TAILER;
-		while(cur!=TAILER){
+		do{
 			if(element<cur.data){
 				prev.next=newNode;
 				newNode.next=cur;
@@ -41,7 +41,7 @@ public class Problem30 extends CircularLinkedList{
 			prev=cur;
 			cur=cur.next;
 			
-		}
+		}while(cur!=TAILER);
 	  
 		//If the node has to inserted at last then insert
 		insertAtBack(element);
@@ -61,8 +61,10 @@ public class Problem30 extends CircularLinkedList{
 		p.insertOrder(25);
 		p.insertOrder(10);
 		p.insertOrder(15);
+		p.displayList();
+		System.out.println();
 		p.insertOrder(12);
-		p.insertAtBack(7);
+		p.insertOrder(7);
 		p.insertOrder(78);
 		p.displayList();
 	}
