@@ -1,5 +1,9 @@
 package com.ds.graph;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import com.ds.list.Bag;
 import com.ds.utils.StdIn;
 
@@ -17,7 +21,7 @@ public class Graph {
 		this.E=0;
 		adj=(Bag<Integer>[])new Bag[v];
 		for(int i=0;i<v;i++)
-			adj[v]=new Bag<Integer>();
+			adj[i]=new Bag<Integer>();
 	}
 	
 	public Graph(StdIn in){
@@ -45,6 +49,34 @@ public class Graph {
     	adj[v].add(w);
     	adj[w].add(v);
     	
+    }
+    public Iterable<Integer> adj(int v){
+    	return adj[v];
+    }
+    
+    public String toString(){
+    	
+    	String s=V+" vertices, "+E+" edges\n";
+    	for(int v=0;v<V;v++){
+    		
+    		s+=v+": ";
+    		for(int w:this.adj(v))
+    			s+=w+" ";
+    		s+="\n";
+    	}
+    	return s;
+    }
+    
+    public static void main(String args[]){
+    	try {
+			StdIn in=new StdIn();
+		    in.setScanner(new Scanner(new File("text/tinyG.txt")));
+			Graph g=new Graph(in);
+			System.out.println(g);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 	
 }
