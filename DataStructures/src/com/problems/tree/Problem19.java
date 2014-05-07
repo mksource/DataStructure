@@ -34,15 +34,15 @@ public class Problem19 {
 		for(int i=0;i<n;i++){
 			
 			int parent=arr[i];
-			
-		    //If Parent is equal to -1
+			//If Parent is equal to -1
 			if(parent==-1)
 				levels[i]=0;
-				
 			levels[i]=findLevel(levels,arr,parent);
 			
-			
 		}
+		
+		for(int i=0;i<n;i++)
+			System.out.print(levels[i]+" ");
 	}
 	/**
 	 * @param args
@@ -50,6 +50,10 @@ public class Problem19 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		Problem19 p=new Problem19();
+		int arr[]={8,7,0,5,5,8,7,0,-1};
+		p.printReverseLevelOrder(arr);
+		
 		
 	}
 
