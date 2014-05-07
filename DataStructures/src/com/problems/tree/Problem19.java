@@ -37,7 +37,8 @@ public class Problem19 {
 			//If Parent is equal to -1
 			if(parent==-1)
 				levels[i]=0;
-			levels[i]=findLevel(levels,arr,parent);
+			else
+				levels[i]=findLevel(levels,arr,parent);
 			
 		}
 		
