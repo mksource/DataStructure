@@ -17,7 +17,8 @@ public class Problem19 {
 		}
 		
 		
-		return findLevel(levels,arr,arr[elem]);
+		levels[elem]=findLevel(levels,arr,arr[elem]);
+		return levels[elem]+1;
 			
 	}
 	
@@ -53,7 +54,8 @@ public class Problem19 {
 
 		Problem19 p=new Problem19();
 		int arr[]={8,7,0,5,5,8,7,0,-1};
-		p.printReverseLevelOrder(arr);
+		int arr1[]={17, 25, 0 ,14 ,7 ,2 ,5, 25 ,18 ,8 ,16, 27, 10 ,9 ,19, 7 ,31 ,31 ,19 ,0 ,8, 14, 9, 17 ,18 ,2 ,30 ,16 ,30 ,10 ,5 ,-1, 27};
+		p.printReverseLevelOrder(arr1);
 		
 		
 	}
