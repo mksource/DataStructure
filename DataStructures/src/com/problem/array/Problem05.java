@@ -8,6 +8,12 @@ public class Problem05 {
 
 	
 	//Moore's Voting algorithm
+	/*
+	 * The basic idea behind the moore's voting algorithm 
+	 * is if we cancel out each occurrence of an element e with all 
+	 * the other elements that are different from e then e will still exists 
+	 * if it is a majority element
+	 */
 	private int findMajority(int arr[]){
 		
 		int  maj_index=0;
