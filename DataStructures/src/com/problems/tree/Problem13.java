@@ -2,7 +2,7 @@ package com.problems.tree;
 
 import com.ds.trees.BinaryNode;
 /*
- * To find the diameter of the tree
+ * To find the diameter of the tree The diameter of the tree is the longest path between two leaves in the tree
  */
 
 public class Problem13 {
