@@ -3,6 +3,10 @@ package com.problem.graph;
 import com.ds.graph.Graph;
 import java.util.Stack;
 
+/*
+ * This program will print the depth first paths
+ */
+
 public class DepthFirstPaths {
 	
 	private boolean[] marked;

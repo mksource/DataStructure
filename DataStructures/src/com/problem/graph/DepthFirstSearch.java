@@ -1,6 +1,9 @@
 package com.problem.graph;
 
 import com.ds.graph.Graph;
+/*
+ * This will do a Depth first Search of the Graph
+ */
 
 public class DepthFirstSearch {
 	
