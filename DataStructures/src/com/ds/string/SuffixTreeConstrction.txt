@@ -1,0 +1,11 @@
+Explaining UKkonen's Algorithm 
+
+1. For a given String text T, Ukkonen's algorithm starts with an empty Tree
+
+2. Then it keeps on adding the N prefixes of T to the tree
+
+3. It is a online algorithm since it scans from left to the right
+
+4. Adding a new prefix to the tree is done by walking through the tree and visiting each of the suffix of the tree
+
+5. 
